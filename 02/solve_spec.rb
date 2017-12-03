@@ -1,11 +1,8 @@
 require "rspec"
-require "csv"
-require "./largest_difference_checksum.rb"
 
-RSpec.describe "file checksum" do
-  it "reads the file into an array of arrays and computes the table checksum" do
-    table = CSV.read("./test_input.txt", col_sep: "\t")
-    checksum = LargestDifferenceChecksum.new
-    expect(checksum.table_checksum(table)).to eq 18
+RSpec.describe "solve.rb" do
+  it "computes the checksum of the given file using the largest difference checksum algorithm" do
+    expect { system("ruby ./solve.rb ./test_input.txt") }
+      .to output("18\n").to_stdout_from_any_process
   end
 end

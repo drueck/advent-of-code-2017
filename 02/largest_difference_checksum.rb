@@ -1,4 +1,4 @@
-class Checksum
+class LargestDifferenceChecksum
   def row_checksum(row)
     row = row.map { |str| str.to_i }
     row.max - row.min

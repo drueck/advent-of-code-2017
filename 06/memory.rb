@@ -37,9 +37,5 @@ class Memory
     history.include?(banks)
   end
 
-  attr_reader :banks
-
-  private
-
-  attr_reader :history
+  attr_reader :banks, :history
 end
